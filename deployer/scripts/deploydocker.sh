@@ -10,5 +10,6 @@ sudo rpm -ivh --replacefiles --replacepkgs *.rpm
 echo "Starting docker and enabling it as a service that runs when the machine is running..."
 sudo systemctl enable docker.service
 sudo systemctl start docker.service
+sudo usermod -aG docker $USER
 echo "Docker CE has been successfully installed. "
 echo "Now you can do docker save jenkins/jenkins > ~/jenkins.tar on internet connected machine for example and then docker load < jenkins.tar on this machine."
