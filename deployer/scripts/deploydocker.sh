@@ -1,7 +1,15 @@
 #!/bin/bash
 # adapted from https://www.centlinux.com/2019/02/install-docker-ce-on-offline-centos-7-machine.html
-echo "Assuming your docker.tar.gz file is in the user's home directory."
-echo "Expanding the tarball into the docker folder..."
+# make sure to run the gatherer script first (run make all from the gatherer directory) and then copy the docker.tar.gz to the target machine
+echo "Checking for tarball before we continue to expand and install Docker..."
+FILE=$HOME/docker.tar.gz
+if [ -f "$FILE" ]; then
+    echo "$FILE exists."
+else 
+    echo "$FILE does not exist. Put the tarball there and re-run."
+    exit 1
+fi
+echo "Expanding the tarball into the ~/docker folder..."
 mkdir -p ~/docker
 tar xvf ~/docker.tar.gz -C ~/docker
 cd ~/docker
