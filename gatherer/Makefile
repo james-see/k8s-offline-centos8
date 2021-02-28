@@ -1,19 +1,19 @@
 SHELL=/bin/bash
 
 cool:
-	echo "Hello from the Makefile"
+	@echo "Hello from the Makefile"
 
 test:
-	echo "Mock test done."
+	@echo "Mock test done."
 
 checkos:
-	scripts/checkos.sh
+	@scripts/checkos.sh
 
 getdocker:
-	scripts/getdocker.sh
+	@scripts/getdocker.sh
 
 preflight:
-	scripts/preflight.sh
+	@scripts/preflight.sh
 
 all:
 	checkos preflight getdocker
