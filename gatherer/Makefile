@@ -1,5 +1,7 @@
 SHELL=/bin/bash
 
+all: checkos preflight getdocker
+
 cool:
 	@echo "Hello from the Makefile"
 
@@ -15,8 +17,6 @@ getdocker:
 preflight:
 	@scripts/preflight.sh
 
-all:
-	checkos preflight getdocker
 
 
 .PHONY: clean cool all checkos getdocker preflight
