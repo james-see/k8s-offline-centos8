@@ -17,6 +17,7 @@ getdocker:
 preflight:
 	@scripts/preflight.sh
 
-
+clean:
+	@rm -rf docker docker.tar.gz
 
 .PHONY: clean cool all checkos getdocker preflight
