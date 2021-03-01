@@ -8,6 +8,6 @@ mkdir -p docker
 cd docker
 echo "Getting all of the dependancies localized..."
 sudo yumdownloader --resolve docker-ce
-echo "Compressing the folder of docker stuff to a tarball..."
-tar cvzf ../docker.tar.gz *
+echo "Compressing the folder of docker stuff to a tarball and saves it to the user home directory as docker.tar.gz..."
+tar cvzf "$HOME"/docker.tar.gz *
 echo "Docker prep complete. SCP docker.tar.gz to the offline server or manually transfer it over."
