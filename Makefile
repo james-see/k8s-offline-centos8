@@ -4,7 +4,7 @@ SHELL=/bin/bash
 
 ## shows all targets
 help:
-	@printf "Available targets\n\n"
+	@printf "\nAvailable targets\n\n"
 	@awk '/^[a-zA-Z\-\_0-9]+:/ { \
 		helpMessage = match(lastLine, /^## (.*)/); \
 		if (helpMessage) { \
@@ -14,6 +14,7 @@ help:
 		} \
 	} \
 	{ lastLine = $$0 }' $(MAKEFILE_LIST)
+	@printf "\n"
 
 ## Run the Makefile under gatherer folder and runs all targets, checkos, preflight, and getdocker
 gather:

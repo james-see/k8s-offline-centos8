@@ -4,7 +4,7 @@ SHELL=/bin/bash
 
 ## loads all the available targets and info about them
 help:
-	@printf "Available targets\n\n"
+	@printf "\nAvailable targets\n\n"
 	@awk '/^[a-zA-Z\-\_0-9]+:/ { \
 		helpMessage = match(lastLine, /^## (.*)/); \
 		if (helpMessage) { \
@@ -14,7 +14,7 @@ help:
 		} \
 	} \
 	{ lastLine = $$0 }' $(MAKEFILE_LIST)
-
+	@printf "\n"
 ## checks the operating system to make sure it is CentOS 8
 checkos:
 	@scripts/checkos.sh
