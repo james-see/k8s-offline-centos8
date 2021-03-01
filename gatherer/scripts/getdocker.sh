@@ -10,7 +10,7 @@ sudo yum makecache
 mkdir -p ${HOME}/docker
 cd ${HOME}/docker
 printf "${bldred} [%%] ${txtrst} Getting all of the dependancies localized...\n"
-sudo yumdownloader --resolve docker-ce --destdir ${HOME}/docker
+sudo repoquery --requires --resolve --recursive docker-ce | xargs -r yumdownloader
 printf "${bldred} [%%] ${txtrst} Compressing the folder of docker stuff to a tarball and saves it to the user home directory as docker.tar.gz...\n"
 tar cvzf ${HOME}/docker.tar.gz *
 printf "${GREEN} [%%] ${txtrst} Docker prep complete. SCP docker.tar.gz to the offline server or manually transfer it over.\n"
