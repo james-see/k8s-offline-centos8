@@ -25,4 +25,4 @@ deploy:
 	@cd deployer && $(MAKE) all
 
 clean:
-	@cd gatherer && $(MAKE) -C clean
+	@cd gatherer && $(MAKE) clean
