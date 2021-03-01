@@ -29,9 +29,9 @@ getdocker:
 
 ## wipes the created docker folder
 clean:
-	@rm -rf $HOME/docker 
-	@rm -f docker.tar.gz 
-	@rm -f $HOME/docker.tar.gz
+	@rm -rf $${HOME}/docker
+	@rm -f docker.tar.gz
+	@rm -f $${HOME}/docker.tar.gz
 
 ## test like hello world to show functionality / silliness
 cool:
