@@ -1,6 +1,7 @@
 #!/bin/bash
 bldred='\033[1;31m'
 txtrst='\033[0m'
+GREEN='\033[0;32m'
 
 printf "${bldred} [%%] ${txtrst} Installing Docker CE local rpm to prep for tarball (not installing on machine)..."
 sudo yum-config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
@@ -12,4 +13,4 @@ echo "${bldred} [%%] ${txtrst} Getting all of the dependancies localized..."
 sudo yumdownloader --resolve docker-ce
 echo "${bldred} [%%] ${txtrst} Compressing the folder of docker stuff to a tarball and saves it to the user home directory as docker.tar.gz..."
 tar cvzf "$HOME"/docker.tar.gz *
-echo "${bldred} [%%] ${txtrst} Docker prep complete. SCP docker.tar.gz to the offline server or manually transfer it over."
+echo "${GREEN} [%%] ${txtrst} Docker prep complete. SCP docker.tar.gz to the offline server or manually transfer it over."
