@@ -1,6 +1,6 @@
 SHELL=/bin/bash
 
-.PHONY: gather deploy all
+.PHONY: gather deploy all clean
 
 ## shows all targets
 help:
@@ -24,3 +24,5 @@ gather:
 deploy:
 	@cd deployer && $(MAKE) all
 
+clean:
+	@cd gatherer && $(MAKE) clean

@@ -29,7 +29,7 @@ getdocker:
 
 ## wipes the created docker folder
 clean:
-	@rm -rf docker docker.tar.gz "$HOME"/docker.tar.gz
+	@rm -rf "$HOME"/docker docker.tar.gz "$HOME"/docker.tar.gz
 
 ## test like hello world to show functionality / silliness
 cool:

@@ -7,8 +7,8 @@ printf "${bldred} [%%] ${txtrst} Installing Docker CE local rpm to prep for tarb
 sudo yum-config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
 sudo yum-config-manager --enable docker-ce-nightly
 sudo yum makecache
-mkdir -p docker
-cd docker
+mkdir -p "$HOME"/docker
+cd "$HOME"/docker
 echo "${bldred} [%%] ${txtrst} Getting all of the dependancies localized...\n"
 sudo yumdownloader --resolve docker-ce
 echo "${bldred} [%%] ${txtrst} Compressing the folder of docker stuff to a tarball and saves it to the user home directory as docker.tar.gz...\n"
