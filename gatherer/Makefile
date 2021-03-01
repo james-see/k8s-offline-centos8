@@ -23,7 +23,7 @@ checkos:
 preflight:
 	@scripts/preflight.sh
 
-## gets all of the things needed for docker local and into docker.tar.gz at home directory
+## gets all of the things needed local and into docker.tar.gz at home directory
 getdocker:
 	@scripts/getdocker.sh
 

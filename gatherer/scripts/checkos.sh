@@ -3,7 +3,7 @@ bldred='\033[1;31m'
 txtrst='\033[0m'
 
 set +x
-printf "${bldred} [%%] ${txtrst} Checking for right Operating System..."
+printf "${bldred} [%%] ${txtrst} Checking for right Operating System...\n"
 if [ "$(cat /etc/redhat-release | grep 'CentOS Linux release 8'  )" ]; then
     echo "Found! CentOS 8 verified, continuing to preflight..."
 else
